@@ -11,7 +11,7 @@ public class PlayerStats : MonoBehaviour
 
     public static float speed = 10f;
 
-    public static float fireRate = 1;
+    //public static float fireRate = 1;
 
     public static int damage = 50;
 

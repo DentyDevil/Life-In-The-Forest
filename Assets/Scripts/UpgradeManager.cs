@@ -85,7 +85,7 @@ public class UpgradeManager : MonoBehaviour
     {
         playerDamageText.text = "DAMAGE: " + PlayerStats.damage;
         playerSpeedText.text = "SPEED: " + PlayerStats.speed;
-        playerCooldownText.text = "COOLDOWN: " + string.Format("{0:0.0}", PlayerStats.fireRate);
+        //playerCooldownText.text = "COOLDOWN: " + string.Format("{0:0.0}", PlayerStats.fireRate);
         playerMoneyText.text = "$" + string.Format("{0:00}", PlayerStats.money);
 
         ///FIRST TURRET
@@ -158,7 +158,7 @@ public class UpgradeManager : MonoBehaviour
     {
         if (PlayerStats.money >= UpgradePlayerCooldownCost)
         {
-            PlayerStats.fireRate += UpgradePlayerCooldownValue;
+            //PlayerStats.fireRate += UpgradePlayerCooldownValue;
             PlayerStats.money -= UpgradePlayerCooldownCost;
             UpgradePlayerCooldownCost *= CooldownCostMultiply;
             //if (CooldownCostMultiply < 1.8f)

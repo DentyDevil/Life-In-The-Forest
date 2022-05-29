@@ -9,11 +9,6 @@ public class PlayerController : MonoBehaviour
     public float topBound;
     public float bottomBound;
 
-    public GameObject bulletPrefab;
-    public GameObject firePoint;
-
-    float fireCountdown = 0;
-
     float vertical;
 
     public GameOver gameOver;
@@ -26,8 +21,6 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         vertical = Input.GetAxis("Vertical");
-
-        Shoot(firePoint);
     }
 
     private void FixedUpdate()
@@ -46,19 +39,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector2(transform.position.x, -bottomBound);
         }
-    }
-
-    void Shoot(GameObject firePoint)
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space))
-        {
-            if (fireCountdown <= 0)
-            {
-                Instantiate(bulletPrefab, firePoint.transform.position, Quaternion.identity);
-                fireCountdown = 1f / PlayerStats.fireRate;
-            }
-        }
-        fireCountdown -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

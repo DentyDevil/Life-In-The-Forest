@@ -116,7 +116,7 @@ public class SaveManager : MonoBehaviour
         data.playerMoney = PlayerStats.money;
         data.playerDamage = PlayerStats.damage;
         data.playerSpeed = PlayerStats.speed;
-        data.playerFireRate = PlayerStats.fireRate;
+        //data.playerFireRate = PlayerStats.fireRate;
 
         ///
 
@@ -213,7 +213,7 @@ public class SaveManager : MonoBehaviour
             PlayerStats.money = data.playerMoney;
             PlayerStats.damage = data.playerDamage;
             PlayerStats.speed = data.playerSpeed;
-            PlayerStats.fireRate = data.playerFireRate;
+            //PlayerStats.fireRate = data.playerFireRate;
 
             ///
 
