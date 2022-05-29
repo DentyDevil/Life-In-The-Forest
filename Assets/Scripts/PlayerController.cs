@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
-
     public float topBound;
     public float bottomBound;
+
+    public GameObject spawnPointWeapon;
+    public static GameObject playerWeapon;
 
     float vertical;
 
@@ -15,7 +16,8 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-       
+        Instantiate(playerWeapon, spawnPointWeapon.transform.parent);
+
     }
 
     private void Update()

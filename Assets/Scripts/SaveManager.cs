@@ -31,6 +31,7 @@ public class SaveManager : MonoBehaviour
         public int playerDamage;
         public float playerSpeed;
         public float playerFireRate;
+        public GameObject playerWeapon;
 
         ///
 
@@ -104,6 +105,11 @@ public class SaveManager : MonoBehaviour
         public float s_ThreeTurretUpgradeAttackDistanceValue;
         public float s_ThreeTurretUpgradeAttackDistanceMultiply;
 
+        ///SHOP
+
+        public bool s_pressedButton;
+        public Vector2 s_lastPosition;
+
         ///
     }
 
@@ -117,10 +123,11 @@ public class SaveManager : MonoBehaviour
         data.playerDamage = PlayerStats.damage;
         data.playerSpeed = PlayerStats.speed;
         //data.playerFireRate = PlayerStats.fireRate;
+        data.playerWeapon = PlayerController.playerWeapon;
 
         ///
 
-        data.s_UpgradePlayerDamageCost = UpgradeManager.UpgradePlayerDamageCost;
+    data.s_UpgradePlayerDamageCost = UpgradeManager.UpgradePlayerDamageCost;
         data.s_UpgradePlayerDamageValue = UpgradeManager.UpgradePlayerDamageValue;
         data.s_damageCostMultiply = UpgradeManager.damageCostMultiply;
 
@@ -190,9 +197,13 @@ public class SaveManager : MonoBehaviour
         data.s_ThreeTurretUpgradeAttackDistanceValue = UpgradeManager.ThreeTurretUpgradeAttackDistanceValue;
         data.s_ThreeTurretUpgradeAttackDistanceMultiply = UpgradeManager.ThreeTurretUpgradeAttackDistanceMultiply;
 
-        ///
+        ///SHOP
 
-        string json = JsonUtility.ToJson(data);
+        data.s_pressedButton = SelectWeaponButton.pressedButton;
+        data.s_lastPosition = SelectWeaponButton.lastPosition;
+
+    ///
+    string json = JsonUtility.ToJson(data);
 
         File.WriteAllText(Application.persistentDataPath + "/cuberzombysave.json", json);
 
@@ -214,6 +225,7 @@ public class SaveManager : MonoBehaviour
             PlayerStats.damage = data.playerDamage;
             PlayerStats.speed = data.playerSpeed;
             //PlayerStats.fireRate = data.playerFireRate;
+            PlayerController.playerWeapon = data.playerWeapon;
 
             ///
 
@@ -286,6 +298,11 @@ public class SaveManager : MonoBehaviour
             UpgradeManager.ThreeTurretUpgradeAttackDistanceCost = data.s_ThreeTurretUpgradeAttackDistanceCost;
             UpgradeManager.ThreeTurretUpgradeAttackDistanceValue = data.s_ThreeTurretUpgradeAttackDistanceValue ;
             UpgradeManager.ThreeTurretUpgradeAttackDistanceMultiply = data.s_ThreeTurretUpgradeAttackDistanceMultiply;
+
+            ///SHOP
+
+            SelectWeaponButton.pressedButton = data.s_pressedButton;
+            SelectWeaponButton.lastPosition = data.s_lastPosition;
 
             ///
         }
