@@ -8,7 +8,7 @@ public class TurretConfig : MonoBehaviour
     public GameObject firePoint;
     float fireCountdown = 0;
 
-    public void TurretAttack(int turretDamage, float FireRate, float attackDistance, Vector2 direction)
+    public void TurretAttack(int turretDamage, float FireRate, float attackDistance, Vector2 direction, AudioSource AudioSource, AudioClip shootSound)
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, attackDistance, LayerMask.GetMask("Enemy"));
 
@@ -19,6 +19,7 @@ public class TurretConfig : MonoBehaviour
             if (fireCountdown <= 0)
             {
                 animator.SetTrigger("Attack");
+                AudioSource.PlayOneShot(shootSound);
                 e.TakeDamage(turretDamage);
                 fireCountdown = 1f / FireRate;
                 animator.speed = FireRate;

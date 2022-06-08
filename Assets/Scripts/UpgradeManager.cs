@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
+    public static AudioSource audioSource;
+    public AudioClip click;
+
     public SceneFader sceneFader;
 
     public Text playerDamageText;
@@ -79,7 +82,10 @@ public class UpgradeManager : MonoBehaviour
 
     ///
 
-
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void Update()
     {
         playerDamageText.text = "DAMAGE: " + PlayerStats.damage;
@@ -111,6 +117,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void Menu()
     {
+        audioSource.PlayOneShot(click);
         sceneFader.FadeTo("MainMenu");
         SaveManager.instance.SaveProgres();
     }
@@ -171,6 +178,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeFirstTurretDamage()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= FirstTurretUpgradeDamageCost)
         {
             FirstTurrett.turretDamage += FirstTurretUpgradeDamageValue;
@@ -187,6 +195,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeFirstTurretCooldown()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= FirstTurretUpgradeCooldownCost)
         {
             FirstTurrett.fireRate += FirstTurretUpgradeCooldownValue;
@@ -203,6 +212,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeFirstTurretAttackDistance()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= FirstTurretUpgradeAttackDistanceCost)
         {
             FirstTurrett.attackDistance += FirstTurretUpgradeAttackDistanceValue;
@@ -221,6 +231,7 @@ public class UpgradeManager : MonoBehaviour
     
     public void UpgradeSecondTurretDamage()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= SecondTurretUpgradeDamageCost)
         {
             SecondTurret.turretDamage += SecondTurretUpgradeDamageValue;
@@ -236,6 +247,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeSecondTurretCoolDown()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= SecondTurretUpgradeCooldownCost)
         {
             SecondTurret.fireRate += SecondTurretUpgradeCooldownValue;
@@ -251,6 +263,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeSecondTurretAttackDistance()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= SecondTurretUpgradeAttackDistanceCost)
         {
             SecondTurret.attackDistance += SecondTurretUpgradeAttackDistanceValue;
@@ -268,6 +281,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeThreeTurretDamage()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= ThreeTurretUpgradeDamageCost)
         {
             ThreeTurret.turretDamage += ThreeTurretUpgradeDamageValue;
@@ -283,6 +297,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeThreeTurretCoolDown()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= ThreeTurretUpgradeCooldownCost)
         {
             ThreeTurret.fireRate += ThreeTurretUpgradeCooldownValue;
@@ -298,6 +313,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void UpgradeThreeTurretAttackDistance()
     {
+        audioSource.PlayOneShot(click);
         if (PlayerStats.money >= ThreeTurretUpgradeAttackDistanceCost)
         {
             ThreeTurret.attackDistance += ThreeTurretUpgradeAttackDistanceValue;

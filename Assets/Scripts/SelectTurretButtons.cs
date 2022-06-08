@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class SelectTurretButtons : MonoBehaviour
 {
+    public AudioClip click;
+
     public GameObject firstTurretUI;
 
     public GameObject secondTurretUI;
@@ -40,18 +42,21 @@ public class SelectTurretButtons : MonoBehaviour
 
     public void ButtonSelectFirstTurret()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         firstTurretUI.gameObject.SetActive(true);
         secondTurretUI.gameObject.SetActive(false);
         threeTurretUI.gameObject.SetActive(false);
     }
     public void ButtonSelectSecondTurret()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         firstTurretUI.gameObject.SetActive(false);
         secondTurretUI.gameObject.SetActive(true);
         threeTurretUI.gameObject.SetActive(false);
     }
     public void ButtonSelectThreeTurret()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         firstTurretUI.gameObject.SetActive(false);
         secondTurretUI.gameObject.SetActive(false);
         threeTurretUI.gameObject.SetActive(true);
@@ -59,6 +64,7 @@ public class SelectTurretButtons : MonoBehaviour
 
     public void BuySecondButton()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         if (PlayerStats.money >= 2000)
         {
             secondB.interactable = true;
@@ -71,6 +77,7 @@ public class SelectTurretButtons : MonoBehaviour
 
     public void BuyThreeButton()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         if (PlayerStats.money >= 3000)
         {
             threeB.interactable = true;

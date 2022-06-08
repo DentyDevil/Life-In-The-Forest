@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PouseMenu : MonoBehaviour
 {
+    public AudioClip click;
+
     public GameObject ui;
     public SceneFader sceneFader;
 
@@ -30,12 +32,14 @@ public class PouseMenu : MonoBehaviour
 
     public void Retry()
     {
+        PlayerController.playerAudio.PlayOneShot(click);
         Toggle();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
+        PlayerController.playerAudio.PlayOneShot(click);
         Time.timeScale = 1;
         sceneFader.FadeTo("MainMenu");
         SaveManager.instance.SaveProgres();

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SelectWeaponButton : MonoBehaviour
 {
+    public AudioClip click;
     public GameObject textSelect;
     public static bool pressedButton = false;
     public static Vector2 lastPosition;
@@ -17,6 +18,7 @@ public class SelectWeaponButton : MonoBehaviour
     }
     public void SelectedWeapon(GameObject WeaponPrefab)
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         PlayerController.playerWeapon = WeaponPrefab;
         pressedButton = true;
         textSelect.SetActive(true);
@@ -24,10 +26,10 @@ public class SelectWeaponButton : MonoBehaviour
         lastPosition = new Vector2(textSelect.transform.position.x, textSelect.transform.position.y);
     }
 
-    public void Menu()
-    {
-        SaveManager.instance.SaveProgres();
-        SceneFader fader = GameObject.Find("SceneFader").GetComponent<SceneFader>();
-        fader.FadeTo("MainMenu");
-    }
+    //public void Menu()
+    //{
+    //    SaveManager.instance.SaveProgres();
+    //    SceneFader fader = GameObject.Find("SceneFader").GetComponent<SceneFader>();
+    //    fader.FadeTo("MainMenu");
+    //}
 }

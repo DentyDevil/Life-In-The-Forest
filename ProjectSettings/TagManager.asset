@@ -17,6 +17,9 @@ TagManager:
   - ThreeTurretCooldown
   - ThreeTurretAttackDistance
   - FirstWeapon
+  - SecondWeapon
+  - ThreeWeapon
+  - FourWeapon
   layers:
   - Default
   - TransparentFX

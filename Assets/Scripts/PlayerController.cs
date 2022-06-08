@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float topBound;
     public float bottomBound;
+    public static AudioSource playerAudio;
 
     public GameObject spawnPointWeapon;
     public static GameObject playerWeapon;
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        playerAudio = GetComponent<AudioSource>();
         Instantiate(playerWeapon, spawnPointWeapon.transform.parent);
 
     }

@@ -118,6 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2563441890136034534}
   firePoint: {fileID: 2563441890952167976}
+  shoot: {fileID: 8300000, guid: 98be07335d1b40943ba9c6a714cc45ad, type: 3}
   direction: {x: 0, y: 1}
 --- !u!1 &2563441890952167976
 GameObject:

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class BuyWeaponScript : MonoBehaviour
 {
+    public AudioClip click;
+
     public int secondWeaponCost;
     public Button secondB;
     public GameObject buySecondB;
@@ -48,6 +50,7 @@ public class BuyWeaponScript : MonoBehaviour
 
     public void BuySecondWeapon()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         if (PlayerStats.money >= secondWeaponCost)
         {
             secondB.interactable = true;
@@ -58,6 +61,7 @@ public class BuyWeaponScript : MonoBehaviour
     }
     public void BuyThreeWeapon()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         if (PlayerStats.money >= threeWeaponCost)
         {
             threeB.interactable = true;
@@ -68,6 +72,7 @@ public class BuyWeaponScript : MonoBehaviour
     }
     public void BuyFourthWeapon()
     {
+        UpgradeManager.audioSource.PlayOneShot(click);
         if (PlayerStats.money >= fourthWeaponCost)
         {
             fourthB.interactable = true;

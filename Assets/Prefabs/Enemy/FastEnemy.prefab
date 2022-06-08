@@ -126,6 +126,7 @@ MonoBehaviour:
   enemySpeed: 15
   direction: {x: -1, y: 0}
   deathEffect: {fileID: 5844184116179541312, guid: e1c592b367b0b444eaf93fa64d3209b2, type: 3}
+  death: {fileID: 8300000, guid: 5d57ffdb0956b184daae5f25a91db0d9, type: 3}
 --- !u!114 &4962168215944406810
 MonoBehaviour:
   m_ObjectHideFlags: 0

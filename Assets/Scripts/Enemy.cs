@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public Vector2 direction;
 
     public GameObject deathEffect;
+    public AudioClip death;
 
     LevelManager levelManager;
     PlayerStats playerStats;
@@ -52,6 +53,7 @@ public class Enemy : MonoBehaviour
         Destroy(e, 4f);
         PlayerStats.money += cost;
         playerStats.enemyKill++;
+        PlayerController.playerAudio.PlayOneShot(death);
 
         if (standardEnemy == true)
         {

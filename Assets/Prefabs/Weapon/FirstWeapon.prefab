@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7268349089446956116}
   m_Layer: 0
   m_Name: FirstWeapon
-  m_TagString: FirstWeapon
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +129,4 @@ MonoBehaviour:
   firePoint: {fileID: 7268349088609934971}
   bulletPrefab: {fileID: 1375335109411162824, guid: 6e017f14ff76ccb479ab097dafdd3f5f, type: 3}
   fireRate: 1
+  shoot: {fileID: 8300000, guid: d8c2312375056dd41b4f863ace6b5c66, type: 3}

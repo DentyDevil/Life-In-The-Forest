@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class LevelSelector : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip click;
+
     public SceneFader sceneFader;
 
     public Button[] levelButtons;
@@ -20,11 +23,13 @@ public class LevelSelector : MonoBehaviour
 
     public void Select(string levelName)
     {
+        audioSource.PlayOneShot(click);
         sceneFader.FadeTo(levelName);
     }
 
     public void Menu()
     {
+        audioSource.PlayOneShot(click);
         sceneFader.FadeTo("MainMenu");
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FirstTurrett : TurretConfig
 {
+    public AudioClip shoot;
+
     public static int turretDamage = 100;
 
     public Vector2 direction;
@@ -13,6 +15,6 @@ public class FirstTurrett : TurretConfig
 
     private void Update()
     {
-        TurretAttack(turretDamage, fireRate, attackDistance, direction);
+        TurretAttack(turretDamage, fireRate, attackDistance, direction, PlayerController.playerAudio, shoot);
     }
 }

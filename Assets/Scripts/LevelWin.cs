@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelWin : MonoBehaviour
 {
+    public AudioClip click;
     public GameObject levelWinUI;
 
     public SceneFader sceneFader;
@@ -21,12 +22,14 @@ public class LevelWin : MonoBehaviour
 
     public void Menu()
     {
+        PlayerController.playerAudio.PlayOneShot(click);
         Time.timeScale = 1f;
         sceneFader.FadeTo("MainMenu");
     }
 
     public void NextLevel(string levelName)
     {
+        PlayerController.playerAudio.PlayOneShot(click);
         sceneFader.FadeTo(levelName);
     }
 }
