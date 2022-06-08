@@ -80,7 +80,6 @@ public class UpgradeManager : MonoBehaviour
     ///
 
 
-
     private void Update()
     {
         playerDamageText.text = "DAMAGE: " + PlayerStats.damage;

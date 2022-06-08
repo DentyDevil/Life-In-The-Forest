@@ -634,10 +634,10 @@ MonoBehaviour:
   - {fileID: 8672778715307490513, guid: 0fb41584586d5174dba14bb3b6683034, type: 3}
   - {fileID: 4962168215944406815, guid: a5ec9b5c450fc004c9276b85beaf2996, type: 3}
   - {fileID: 2066792259043710580, guid: b36bf22ed208a6c4181a582dd433fd29, type: 3}
-  startWaveDuration: 220
-  waveRate: 1
-  spawnEmenyRate: 2
-  enemySpawnCount: 2
+  startWaveDuration: 300
+  waveRate: 2
+  spawnEmenyRate: 3
+  enemySpawnCount: 3
   gameOver: {fileID: 369474146}
 --- !u!4 &369474144
 Transform:
@@ -695,27 +695,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oneTurretActive: 1
-  standardEnemiesKilled: 20
+  standardEnemiesKilled: 25
   turretPrefab: {fileID: 5501291488423363487, guid: 7acaa3c2652d4474db88aa6c95fe4aa9, type: 3}
   spawnPoint: {fileID: 368405759}
   enemyStandardKillText: {fileID: 324016056}
   enemyStandardBar: {fileID: 2002577963}
   oneEnemyBar: {fileID: 913458722}
   secondTurretActive: 1
-  fastEnemyKilled: 25
+  fastEnemyKilled: 30
   secondTurretPrefab: {fileID: 3200961544368631343, guid: 538ec31edf9b1ae4bba2ec57e3c09794, type: 3}
   secondSpawnPoint: {fileID: 1230177281}
   enemyFastKillText: {fileID: 1795173590}
   enemyFastBar: {fileID: 1968375304}
   secondEnemyBar: {fileID: 742172410}
   ThreeTurretActive: 1
-  slowEnemyKilled: 30
+  slowEnemyKilled: 35
   threeTurretPrefab: {fileID: 2563441890136034535, guid: 7cda8589734d21741a0b04e02b27de26, type: 3}
   threeSpawnPoint: {fileID: 607324763}
   enemySlowKillText: {fileID: 402922678}
   enemySlowBar: {fileID: 1675090357}
   threeEnemyBar: {fileID: 568843261}
-  enemyKillCount: 150
+  enemyKillCount: 250
   playerStats: {fileID: 1887597675}
   killStandardEmemy: 0
   killFastEnemy: 0
@@ -749,7 +749,7 @@ MonoBehaviour:
   levelWinUI: {fileID: 98067401}
   sceneFader: {fileID: 1100895449}
   levelWin: 0
-  nextLevelInt: 3
+  nextLevelInt: 2
 --- !u!1 &380535033
 GameObject:
   m_ObjectHideFlags: 0

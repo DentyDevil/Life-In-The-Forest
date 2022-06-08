@@ -113,5 +113,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 100
-  bulletSpeed: 10
+  bulletSpeed: 18
   bulletDirection: {x: 1, y: 0}

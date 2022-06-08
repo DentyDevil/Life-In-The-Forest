@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SelectWeaponButton : MonoBehaviour
 {
-    public static GameObject selectedWeapontPrefab;
     public GameObject textSelect;
     public static bool pressedButton = false;
     public static Vector2 lastPosition;

@@ -7,7 +7,7 @@ public class PlayerStats : MonoBehaviour
     public int startHealth;
     public static int Health;
 
-    public static float money = 10000000;
+    public static float money = 100;
 
     public static float speed = 10f;
 

@@ -110,6 +110,10 @@ public class SaveManager : MonoBehaviour
         public bool s_pressedButton;
         public Vector2 s_lastPosition;
 
+        public bool s_secondWeaponIsBuy;
+        public bool s_threeWeaponIsBuy;
+        public bool s_fourthWeaponIsBuy;
+
         ///
     }
 
@@ -202,17 +206,21 @@ public class SaveManager : MonoBehaviour
         data.s_pressedButton = SelectWeaponButton.pressedButton;
         data.s_lastPosition = SelectWeaponButton.lastPosition;
 
+        data.s_secondWeaponIsBuy = BuyWeaponScript.secondWeaponIsBuy;
+        data.s_threeWeaponIsBuy = BuyWeaponScript.threeWeaponIsBuy;
+        data.s_fourthWeaponIsBuy = BuyWeaponScript.fourthWeaponIsBuy;
+
     ///
     string json = JsonUtility.ToJson(data);
 
-        File.WriteAllText(Application.persistentDataPath + "/cuberzombysave.json", json);
+        File.WriteAllText(Application.persistentDataPath + "/cuberzombysaveee.json", json);
 
         Debug.Log("Progress is saved");
     }
 
     public void LoadProgress()
     {
-        string path = Application.persistentDataPath + "/cuberzombysave.json";
+        string path = Application.persistentDataPath + "/cuberzombysaveee.json";
         if (File.Exists(path))
         {
             string json = File.ReadAllText(path);
@@ -303,6 +311,10 @@ public class SaveManager : MonoBehaviour
 
             SelectWeaponButton.pressedButton = data.s_pressedButton;
             SelectWeaponButton.lastPosition = data.s_lastPosition;
+
+            BuyWeaponScript.secondWeaponIsBuy = data.s_secondWeaponIsBuy;
+            BuyWeaponScript.threeWeaponIsBuy = data.s_threeWeaponIsBuy;
+            BuyWeaponScript.fourthWeaponIsBuy = data.s_fourthWeaponIsBuy;
 
             ///
         }

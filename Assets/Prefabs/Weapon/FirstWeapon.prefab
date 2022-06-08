@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7268349089446956116}
   m_Layer: 0
   m_Name: FirstWeapon
-  m_TagString: Untagged
+  m_TagString: FirstWeapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

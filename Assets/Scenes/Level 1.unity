@@ -154,7 +154,7 @@ RectTransform:
   - {fileID: 939279394}
   - {fileID: 831802752}
   m_Father: {fileID: 1090204909}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -634,7 +634,7 @@ MonoBehaviour:
   - {fileID: 8672778715307490513, guid: 0fb41584586d5174dba14bb3b6683034, type: 3}
   - {fileID: 4962168215944406815, guid: a5ec9b5c450fc004c9276b85beaf2996, type: 3}
   - {fileID: 2066792259043710580, guid: b36bf22ed208a6c4181a582dd433fd29, type: 3}
-  startWaveDuration: 100
+  startWaveDuration: 120
   waveRate: 1
   spawnEmenyRate: 1
   enemySpawnCount: 1
@@ -695,21 +695,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   oneTurretActive: 1
-  standardEnemiesKilled: 2
+  standardEnemiesKilled: 10
   turretPrefab: {fileID: 5501291488423363487, guid: 7acaa3c2652d4474db88aa6c95fe4aa9, type: 3}
   spawnPoint: {fileID: 368405759}
   enemyStandardKillText: {fileID: 324016056}
   enemyStandardBar: {fileID: 2002577963}
   oneEnemyBar: {fileID: 913458722}
   secondTurretActive: 1
-  fastEnemyKilled: 2
+  fastEnemyKilled: 15
   secondTurretPrefab: {fileID: 3200961544368631343, guid: 538ec31edf9b1ae4bba2ec57e3c09794, type: 3}
   secondSpawnPoint: {fileID: 1230177281}
   enemyFastKillText: {fileID: 1795173590}
   enemyFastBar: {fileID: 1968375304}
   secondEnemyBar: {fileID: 742172410}
   ThreeTurretActive: 1
-  slowEnemyKilled: 2
+  slowEnemyKilled: 20
   threeTurretPrefab: {fileID: 2563441890136034535, guid: 7cda8589734d21741a0b04e02b27de26, type: 3}
   threeSpawnPoint: {fileID: 607324763}
   enemySlowKillText: {fileID: 402922678}
@@ -8811,7 +8811,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 110326775}
-  - {fileID: 963806029}
   m_Father: {fileID: 98067402}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9230,13 +9229,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2087959020}
-  m_Father: {fileID: 831802752}
-  m_RootOrder: 1
+  m_Father: {fileID: 1090204909}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 604.19714, y: -50}
-  m_SizeDelta: {x: 396.1314, y: 100}
+  m_AnchoredPosition: {x: 1815.5446, y: -1055.6567}
+  m_SizeDelta: {x: 209.0423, y: 44.6867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &963806030
 MonoBehaviour:
@@ -9455,10 +9454,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -9502,6 +9501,7 @@ RectTransform:
   - {fileID: 913458723}
   - {fileID: 742172411}
   - {fileID: 568843262}
+  - {fileID: 963806029}
   - {fileID: 1827948382}
   - {fileID: 1898932109}
   - {fileID: 98067402}
@@ -10244,7 +10244,7 @@ RectTransform:
   - {fileID: 1534211151}
   - {fileID: 2106045460}
   m_Father: {fileID: 1090204909}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -10561,7 +10561,6 @@ MonoBehaviour:
   topBound: 4
   bottomBound: 5
   spawnPointWeapon: {fileID: 1506985442}
-  player: {fileID: 1887597671}
   gameOver: {fileID: 369474146}
 --- !u!114 &1887597675
 MonoBehaviour:
@@ -10624,7 +10623,7 @@ RectTransform:
   - {fileID: 1178924997}
   - {fileID: 1339361852}
   m_Father: {fileID: 1090204909}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -11118,7 +11117,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ea1df84e095eb0c429f5ecde3f26073c, type: 3}
-    m_FontSize: 79
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
